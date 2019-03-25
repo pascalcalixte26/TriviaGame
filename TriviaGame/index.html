@@ -1,0 +1,563 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TriviaGame</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    #ESPN {
+        background-image: url("assets/images/ESPN.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 1000px;
+        background-position: center;
+        background-position: fixed;
+
+    }
+
+    #main {
+        background-color: yellow;
+        position: bottom middle 0px; 
+        padding-left: 2pc;
+            
+    }   
+    
+    .jumbotron {
+        text-align: center;
+        position: relative center;
+        
+    }
+
+</style>
+
+<script>
+
+  var timeOut = setTimeout(time, 119998);                              
+  var sec = setInterval(secTimer, 1000);
+  var sec2 = setInterval(secTimer2, 60000);
+  var min = setInterval(minTimer, 60000);
+  var s = 59;
+  var m = 1;
+  var right = 0;
+  var wrong = 0;
+  
+  function time() {
+    alert("Times up");
+    clearInterval(sec);
+    clearInterval(sec2);
+    clearInterval(min);
+    submit();
+    s = "00";
+    m = "00";
+
+  }
+
+  function secTimer() {
+  s = s - 1;
+  document.getElementById("setSecId").innerHTML = s;                                                   
+ };
+
+ function secTimer2() {
+  s = 60;
+  s = s - 1;
+  document.getElementById("setSecId").innerHTML = s;                                                   
+ };
+
+ function minTimer() {
+  m = m - 1;
+  sec;
+  document.getElementById("setMinId").innerHTML = m;
+ }
+
+ function Q1O1() {
+var Q1O1 = document.getElementById("Q1O1");                             
+  if (Q1O1.checked == true){
+  console.log("box 1 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q1O2() {
+var Q1O2 = document.getElementById("Q1O2");                             
+  if (Q1O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q1O3() {
+var Q1O3 = document.getElementById("Q1O3");                             
+  if (Q1O3.checked == true){
+  console.log("box 3 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q1O4() {
+var Q1O4 = document.getElementById("Q1O4");                             
+  if (Q1O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q2O1() {
+var Q2O1 = document.getElementById("Q2O1");                             
+  if (Q2O1.checked == true){
+  console.log("box 1 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q2O2() {
+var Q2O2 = document.getElementById("Q2O2");                             
+  if (Q2O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q2O3() {
+var Q2O3 = document.getElementById("Q2O3");                             
+  if (Q2O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q2O4() {
+var Q2O4 = document.getElementById("Q2O4");                             
+  if (Q2O4.checked == true){
+  console.log("box 4 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q3O1() {
+var Q3O1 = document.getElementById("Q3O1");                             
+  if (Q3O1.checked == true){
+  console.log("box 1 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q3O2() {
+var Q3O2 = document.getElementById("Q3O2");                             
+  if (Q3O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q3O3() {
+var Q3O3 = document.getElementById("Q3O3");                             
+  if (Q3O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q3O4() {
+var Q3O4 = document.getElementById("Q3O4");                             
+  if (Q3O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q4O1() {
+var Q4O1 = document.getElementById("Q4O1");                             
+  if (Q4O1.checked == true){
+  console.log("box 1 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q4O2() {
+var Q4O2 = document.getElementById("Q4O2");                             
+  if (Q4O2.checked == true){
+  console.log("box 2 was checked!");
+  right = right + 1;
+  console.log(right);
+  
+  }
+ }
+
+ function Q4O3() {
+var Q4O3 = document.getElementById("Q4O3");                             
+  if (Q4O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q4O4() {
+var Q4O4 = document.getElementById("Q4O4");                             
+  if (Q4O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q5O1() {
+var Q5O1 = document.getElementById("Q5O1");                             
+  if (Q5O1.checked == true){
+  console.log("box 1 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q5O2() {
+var Q5O2 = document.getElementById("Q5O2");                             
+  if (Q5O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q5O3() {
+var Q5O3 = document.getElementById("Q5O3");                             
+  if (Q5O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q5O4() {
+var Q5O4 = document.getElementById("Q5O4");                             
+  if (Q5O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q6O1() {
+var Q6O1 = document.getElementById("Q6O1");                             
+  if (Q6O1.checked == true){
+  console.log("box 1 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q6O2() {
+var Q6O2 = document.getElementById("Q6O2");                             
+  if (Q6O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q6O3() {
+var Q6O3 = document.getElementById("Q6O3");                             
+  if (Q6O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q6O4() {
+var Q6O4 = document.getElementById("Q6O4");                             
+  if (Q6O4.checked == true){
+  console.log("box 4 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q7O1() {
+var Q7O1 = document.getElementById("Q7O1");                             
+  if (Q7O1.checked == true){
+  console.log("box 1 was checked!");
+  right = right + 1;
+  console.log(right);
+  }
+ }
+
+ function Q7O2() {
+var Q7O2 = document.getElementById("Q7O2");                             
+  if (Q7O2.checked == true){
+  console.log("box 2 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  
+  }
+ }
+
+ function Q7O3() {
+var Q7O3 = document.getElementById("Q7O3");                             
+  if (Q7O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q7O4() {
+var Q7O4 = document.getElementById("Q7O4");                             
+  if (Q7O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q8O1() {
+var Q8O1 = document.getElementById("Q8O1");                             
+  if (Q8O1.checked == true){
+  console.log("box 1 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q8O2() {
+var Q8O2 = document.getElementById("Q8O2");                             
+  if (Q8O2.checked == true){
+  console.log("box 2 was checked!");
+  right = right + 1;
+  console.log(right);
+  
+  }
+ }
+
+ function Q8O3() {
+var Q8O3 = document.getElementById("Q8O3");                             
+  if (Q8O3.checked == true){
+  console.log("box 3 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }
+
+ function Q8O4() {
+var Q8O4 = document.getElementById("Q8O4");                             
+  if (Q8O4.checked == true){
+  console.log("box 4 was checked!");
+  wrong = wrong + 1;
+  console.log(wrong);
+  }
+ }  
+
+ function submit() {
+  clearInterval(sec);
+    clearInterval(sec2);
+    clearInterval(min);
+    var unAnswered = 8 - (right + wrong);
+    var finalResults = "All Done! Your results:  Right: " + right + "   Wrong: " + wrong + "   Unanwered: " + unAnswered;
+    document.getElementById("main").innerHTML = finalResults;
+ }                         
+      
+      </script>
+
+<body>
+
+    <div id="ESPN">
+
+        <div class="container" id="triviaQuestions">
+            <div class="row">
+
+                    <div class="jumbotron" id="main">
+                            <h1 class="display-4" id="main2">Totally Trivial Sports Trivia!</h1>
+                            <p class="lead">Time Remaining is <span id="setMinId">01</span><span>:</span><span id="setSecId"> 59</span></p>                 
+                            
+                            <h4>What's the college with the most mens basketball championships?</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q1O1" value="option1" onclick="Q1O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Florida</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q1O2" value="option2" onclick="Q1O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Kentucky</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q1O3" value="option3" onclick="Q1O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">UCLA</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q1O4" value="option4" onclick="Q1O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">North Carolina</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>This college has the last two Heisman winners</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q2O1" value="option1" onclick="Q2O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Ohio State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q2O2" value="option2" onclick="Q2O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Alabama</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q2O3" value="option3" onclick="Q2O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">Penn State</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q2O4" value="option4" onclick="Q2O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">Oklahoma</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>What's the college with the most BCS championships?</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q3O1" value="option1" onclick="Q3O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Alabama</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q3O2" value="option2" onclick="Q3O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Ohio State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q3O3" value="option3" onclick="Q3O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">USC</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q3O4" value="option4" onclick="Q3O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">Clemson</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>Vince Young won the national title with this football team in 2006</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q4O1" value="option1" onclick="Q4O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Florida State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q4O2" value="option2" onclick="Q4O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Texas</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q4O3" value="option3" onclick="Q4O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">Michigan</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q4O4" value="option4" onclick="Q4O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">NorthWestern</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>Carmelo Anthony led this college basketball team to the title in 2003</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q5O1" value="option1" onclick="Q5O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Syracuse</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q5O2" value="option2" onclick="Q5O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">USC</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q5O3" value="option3" onclick="Q5O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">Kentucky</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q5O4" value="option4" onclick="Q5O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">Duke</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>Dean Smith Coached this college basketball team</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q6O1" value="option1" onclick="Q6O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Auburn</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q6O2" value="option2" onclick="Q6O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Kentucky</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q6O3" value="option3" onclick="Q6O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">UCLA</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q6O4" value="option4" onclick="Q6O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">North Carolina</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>The oldest ever Heisman winner, Chris Weinke played for: </h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q7O1" value="option1" onclick="Q7O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Florida State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q7O2" value="option2" onclick="Q7O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Penn State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q7O3" value="option3" onclick="Q7O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">Clemson</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q7O4" value="option4" onclick="Q7O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">Wisconsin</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                            <h4>Joe Paterno coached this college football team to 2 titles</h4>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q8O1" value="option1" onclick="Q8O1()">
+                                    <label class="form-check-label" for="inlineCheckbox1">Ohio State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="Q8O2" value="option2" onclick="Q8O2()">
+                                    <label class="form-check-label" for="inlineCheckbox2">Penn State</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="Q8O3" value="option3" onclick="Q8O3()">
+                                        <label class="form-check-label" for="inlineCheckbox3">USC</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="Q8O4" value="option4" onclick="Q8O4()">
+                                            <label class="form-check-label" for="inlineCheckbox4">Arizona</label>
+                                          </div>
+                                          <br>
+                                          <br>
+
+                                          <button type="button" class="btn btn-secondary btn-lg" onclick="submit()">Submit</button>
+
+                                          <br>
+                                          <br>
+                                          
+                                          <p id="results"></p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+</body>
+</html>
